@@ -2,7 +2,7 @@
 
 This Python backend application serves on localhost:8000/movies/ a plain list of all movies from [Ghibli API](https://ghibliapi.herokuapp.com/) with a list of people who appear in the movie.
 
-![High-Level Design](assets\images\Design.png "High-Level Design")
+![High-Level Design](assets/images/Design.png "High-Level Design")
 
 ---
 
@@ -50,20 +50,20 @@ This Python backend application serves on localhost:8000/movies/ a plain list of
 
 ## Sample Output
 1. localhost:8000/movies
-![movies home](assets\images\movies_home.png "Movies Home")
+![movies home](assets/images/movies_home.png "Movies Home")
 
 2. localhost:8000/movies/api
-![API List View](assets\images\api_list_view.png "API List View")
+![API List View](assets/images/api_list_view.png "API List View")
 
 3. localhost:8000/movies/api/\<film-id\>
-![API Detail View](assets\images\api_detail_view.png "API Detail View")
+![API Detail View](assets/images/api_detail_view.png "API Detail View")
 
 4. Unit tests and code coverage
     ```
     coverage run --source='./films' manage.py test films
     coverage report -m
     ```
-    ![ULT & Code Coverage](assets\images\unit_test_code_coverage.png "ULT & Code Coverage")
+    ![ULT & Code Coverage](assets/images/unit_test_code_coverage.png "ULT & Code Coverage")
 
 ---
 
