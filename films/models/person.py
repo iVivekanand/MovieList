@@ -2,6 +2,10 @@ from django.db import models
 
 
 class PersonManager(models.Manager):
+    """
+    Provides person object and meaningful name for foreign key
+    """
+
     def create_person(self, id, name):
         person = self.create(
             id=id,
@@ -14,6 +18,9 @@ class PersonManager(models.Manager):
 
 
 class Person(models.Model):
+    """
+    Schema definition for person, natural key exposed for human readability
+    """
     id = models.CharField(max_length=120, primary_key=True)
     name = models.CharField(max_length=100, unique=True)
 

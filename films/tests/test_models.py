@@ -5,13 +5,16 @@ from films.models.person import Person, PersonManager
 from films.models.film import Film, FilmManager
 
 
-class PersonTestCases(TestCase):
+class FilmTestCases(TestCase):
 
     def test_create_film(self):
         class TestFilmManager(models.Model):
             objects = FilmManager()
         self.test_film_manager = TestFilmManager
         self.assertIsInstance(self.test_film_manager.objects, FilmManager)
+
+
+class PersonTestCases(TestCase):
 
     def test_create_person(self):
         class TestPersonManager(models.Model):

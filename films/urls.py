@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import path, include
 
 from films.crons.database_refresh import start_db_refresh
@@ -9,4 +8,5 @@ urlpatterns = [
     path('movies/api/', include('films.api.urls')),
 ]
 
+# Backgroung daemon to be started during server startup
 start_db_refresh()

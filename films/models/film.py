@@ -1,7 +1,12 @@
 from django.db import models
 from films.models.person import Person
 
+
 class FilmManager(models.Manager):
+    """
+    Provides film objects when requestsed
+    """
+
     def create_film(self, id, title, description, release_date):
         film = self.create(
             id=id,
@@ -13,6 +18,9 @@ class FilmManager(models.Manager):
 
 
 class Film(models.Model):
+    """
+    Schema definition for a film, ordered descendingly with release date
+    """
     id = models.CharField(max_length=120, primary_key=True)
     title = models.CharField(max_length=120)
     description = models.TextField()

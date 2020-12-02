@@ -1,7 +1,12 @@
 from films.models.film import Film
 from django.shortcuts import render
 
+
 def home(request):
+    """
+    Home page for movie list at localhost:8000/movies
+    Data populated by querying SQLite and rendered using a template html
+    """
     films_in_db = Film.objects.all()
     films = {}
     for film in films_in_db:

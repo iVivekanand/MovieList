@@ -1,35 +1,32 @@
 {% extends "base_generic.html" %}
 
-<style> 
-  .text{ 
-      white-space: nowrap;  
-      overflow: hidden; 
-      text-overflow: ellipsis; 
-  } 
-</style> 
+<style>
+  .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
 {% block content %}
-  <h1>Movie List</h1>
-  <p>This library has the following movies:</p>
-  <ul>
-    {% for key, value in films.items %}
-      <div>
-        <h2>
-          <b>{{ value.title }}</b>
-        </h2>
-        <p>
-          {{ value.description }}
-        </p>
-        <i>Released on <time>{{ value.release_date }}</time></i>
-        <br><br>
-        <b>Cast</b>
-        <ul>
-          {% for actor in value.actors %}
-          <li> {{ actor }} </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <br />
-    {% endfor %}
-  </ul>
+<h1>Movie List</h1>
+<ul>
+  {% for key, value in films.items %}
+  <div>
+    <h2>
+      <b>{{ value.title }}</b>
+    </h2>
+    <p>{{ value.description }}</p>
+    <i>Released on <time>{{ value.release_date }}</time></i>
+    <br><br>
+    <b>Cast</b>
+    <ul>
+      {% for actor in value.actors %}
+      <li> {{ actor }} </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <br />
+  {% endfor %}
+</ul>
 {% endblock %}
