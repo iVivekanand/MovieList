@@ -23,7 +23,7 @@ This Python backend application serves on localhost:8000/movies/ a plain list of
 ## Steps to launch local server
 1. Download source from git
     ```
-    git clone https://github.com/iVivekanand/Sennder.git && cd Sennder
+    git clone https://github.com/iVivekanand/MovieList.git && cd Sennder
     ```
 2. Create virtual environment
     ```
