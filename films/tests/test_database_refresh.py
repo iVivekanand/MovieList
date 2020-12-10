@@ -64,6 +64,9 @@ class UpdateFilmAndPeopleTests(TestCase):
         people_qs = self.people_qs
         films_qs = self.films_qs
         update_people()
+        with mock.patch('films.crons.database_refresh.update_people') as update_people_call:
+            update_people_call()
+            update_people_call.assert_called()
 
     @mock.patch('films.models.film.Film.objects')
     @mock.patch('requests.get')
@@ -72,3 +75,6 @@ class UpdateFilmAndPeopleTests(TestCase):
         mock_get.return_value = mock_resp
         films_qs = self.films_qs
         update_films()
+        with mock.patch('films.crons.database_refresh.update_films') as update_films_call:
+            update_films_call()
+            update_films_call.assert_called()
