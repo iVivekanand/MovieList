@@ -82,5 +82,7 @@ This Python backend application serves on localhost:8000/movies/ a plain list of
 3. Live Hosting
     - Heroku needs MySQL/PostGreSQL, no support for SQLite
     - DB migration from SQLite to PostGreSQL
+4. Performance measurements
+    - Efficient logging, alert systems and dashboards
 
 ---
